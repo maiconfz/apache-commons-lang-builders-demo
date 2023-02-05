@@ -22,16 +22,20 @@ import lombok.Getter;
 @Getter
 public class Account implements Diffable<Account>, Comparable<Account> {
     private final BigInteger id;
+
     @HashCodeExclude
     @EqualsExclude
     private final String username;
+
     @HashCodeExclude
     @EqualsExclude
     private final String email;
+
     @ToStringExclude
     @HashCodeExclude
     @EqualsExclude
     private final String password;
+
     @HashCodeExclude
     @EqualsExclude
     private final Set<Role> roles;

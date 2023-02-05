@@ -16,7 +16,7 @@ import io.github.maiconfz.apache_commons_lang_builders_demo.data.Role;
 
 @Component
 public class ReflectionToStringBuilderDemo implements CommandLineRunner {
-    private final Logger LOGGER = LoggerFactory.getLogger(ReflectionToStringBuilderDemo.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ReflectionToStringBuilderDemo.class);
 
     @Override
     public void run(String... args) throws Exception {

@@ -23,7 +23,7 @@ public class ReflectionToStringBuilderDemo implements CommandLineRunner {
         LOGGER.info("## Starting ReflectionToStringBuilderDemo");
         final var account = new Account(BigInteger.ONE, "maicon", "demo@demo.com", "12345",
                 new HashSet<>(Arrays.asList(Role.ADMIN)));
-        LOGGER.info("  Account.class default toString: {}", account);
+        LOGGER.info("  Account.class toString: {}", account);
         LOGGER.info("  Account.class ReflectionToStringBuilder toString:");
         LOGGER.info("    DEFAULT_STYLE: {}", ReflectionToStringBuilder.toString(account));
         LOGGER.info("    DEFAULT_STYLE: {}", ReflectionToStringBuilder.toString(account, ToStringStyle.DEFAULT_STYLE));

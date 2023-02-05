@@ -6,6 +6,7 @@ import java.util.Set;
 import org.apache.commons.lang3.builder.DiffResult;
 import org.apache.commons.lang3.builder.Diffable;
 import org.apache.commons.lang3.builder.ReflectionDiffBuilder;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringExclude;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -22,6 +23,11 @@ public class Account implements Diffable<Account> {
     private final String password;
 
     private final Set<Role> roles;
+
+    @Override
+    public String toString(){
+        return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString();
+    }
 
     @Override
     public DiffResult<Account> diff(Account obj) {

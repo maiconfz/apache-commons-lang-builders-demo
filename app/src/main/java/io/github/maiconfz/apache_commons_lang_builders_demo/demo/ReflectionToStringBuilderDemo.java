@@ -42,7 +42,7 @@ public class ReflectionToStringBuilderDemo implements CommandLineRunner {
                 new ReflectionToStringBuilder(account, ToStringStyle.SHORT_PREFIX_STYLE).setExcludeFieldNames("email")
                         .toString());
 
-        LOGGER.info("## End of ReflectionToStringBuilderDemo");
+        LOGGER.info("## End of ReflectionToStringBuilderDemo\n\n");
 
     }
 

@@ -28,6 +28,7 @@ public class ReflectionDiffBuilderDemo implements CommandLineRunner {
                 final var diffResult = account1.diff(account2);
                 LOGGER.info("  DiffResult of account1 and account2: {}", diffResult);
                 LOGGER.info("  Diffs: {}", diffResult.getDiffs());
+                LOGGER.info("  Diffs number: {}", diffResult.getNumberOfDiffs());
 
                 LOGGER.info("## End of ReflectionDiffBuilderDemo\n\n");
 

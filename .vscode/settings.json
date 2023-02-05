@@ -1,0 +1,7 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "html.format.wrapLineLength": 0,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 999
+}

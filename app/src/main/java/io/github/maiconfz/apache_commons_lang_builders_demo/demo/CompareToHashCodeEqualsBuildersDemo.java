@@ -24,11 +24,14 @@ public class CompareToHashCodeEqualsBuildersDemo implements CommandLineRunner {
                 final var account2 = new Account(BigInteger.TWO, "guest", "guest@demo.com", "12345",
                                 new HashSet<>(Arrays.asList(Role.GUEST)));
 
-                LOGGER.info("  account1 compareTo account 2: {}", account1.compareTo(account2));
-                LOGGER.info("  account1 compareTo account 1: {}", account1.compareTo(account1));
-                LOGGER.info("  account2 compareTo account 1: {}", account2.compareTo(account1));
+                LOGGER.info("  account1 compareTo account2: {}", account1.compareTo(account2));
+                LOGGER.info("  account1 compareTo account1: {}", account1.compareTo(account1));
+                LOGGER.info("  account2 compareTo account1: {}", account2.compareTo(account1));
 
-                LOGGER.info("  account1 equals account 2: {}", account1.equals(account2));
+                LOGGER.info("  account1 compareTo null: {}", account1.compareTo(null));
+
+                LOGGER.info("  account1 equals account2: {}", account1.equals(account2));
+                LOGGER.info("  account1 equals null: {}", account1.equals(null));
 
                 LOGGER.info("  account1 hashCode: {}", account1.hashCode());
                 LOGGER.info("  account2 hashCode: {}", account2.hashCode());

@@ -36,9 +36,14 @@ public class ReflectionToStringBuilderDemo implements CommandLineRunner {
                 ReflectionToStringBuilder.toString(account, ToStringStyle.NO_FIELD_NAMES_STYLE));
         LOGGER.info("    SHORT_PREFIX_STYLE: {}",
                 ReflectionToStringBuilder.toString(account, ToStringStyle.SHORT_PREFIX_STYLE));
-        LOGGER.info("    SHORT_PREFIX_STYLE: {}",
+        LOGGER.info("    SIMPLE_STYLE: {}",
                 ReflectionToStringBuilder.toString(account, ToStringStyle.SIMPLE_STYLE));
+        LOGGER.info("    Excluding field email: {}",
+                new ReflectionToStringBuilder(account, ToStringStyle.SHORT_PREFIX_STYLE).setExcludeFieldNames("email")
+                        .toString());
+
         LOGGER.info("## End of ReflectionToStringBuilderDemo");
+
     }
 
 }
